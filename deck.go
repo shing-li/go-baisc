@@ -1,8 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 //custome type declaration
+//byte slice => string，用ascii code存string
 
 //creat a new type of "deck"
 //which is a silce of strings
@@ -36,4 +40,9 @@ deck:所有type為deck的變數可以call this function
 
 func deal(d deck, handsize int) (deck, deck) { //回傳多個值
 	return d[:handsize], d[handsize:]
+}
+
+//把slice of string轉換成一個string，之後再轉成[]byte以寫入檔案
+func (d deck) toString1() string {
+	return strings.Join([]string(d), ",")
 }
