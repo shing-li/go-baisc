@@ -1,8 +1,6 @@
 package main
 
-import (
-	"io/ioutil"
-)
+import ()
 
 func main() {
 	//declare a slice
@@ -15,9 +13,13 @@ func main() {
 	// fmt.Println("=")
 	// remainingCards.print()
 	//cards.print()
-	cards1 := newDeck()
-	a := cards1.toString1()
-	ioutil.WriteFile("123.txt", []byte(a), 0644)
+	// cards1 := newDeck()
+	// a := cards1.toString()
+	// ioutil.WriteFile("123.txt", []byte(a), 0644)
+	// err := cards1.saveToFile("555.txt")
+	// s, err := ioutil.ReadFile("555.txt")
+	newDeck := newDeckFromFile("555.txt")
 
-	// fmt.Println(cards1.toString())
+	newDeck.shuffle()
+	newDeck.print()
 }
