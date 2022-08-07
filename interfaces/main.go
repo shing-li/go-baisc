@@ -27,6 +27,7 @@ func printGreeting(b bot) {
 // 	fmt.Println(sb.getGreeting())
 // }
 
+//沒用到可以不用命名變數
 func (englishBot) getGreeting() string {
 	return "Hi there!!"
 }

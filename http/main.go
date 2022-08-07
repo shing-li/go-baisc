@@ -25,6 +25,7 @@ func main() {
 		fmt.Println("Errors: ", err)
 		os.Exit(1)
 	}
+
 	fmt.Println(string(a))
 	// var b []string
 	// b = strings.Split(string(a), "body")
